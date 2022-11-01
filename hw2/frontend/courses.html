@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Courses
+        </title>
+    </head>
+
+    <body onload=initCourses()>
+        
+            <header>
+                <a href="index.html">
+                    <img src="C:\Users\User\Desktop\LOGO.png" id="header-logo" alt="logo"  />
+                  
+               </a>
+                <nav>
+                    <ul>
+                            <a href="index.html"><li>Αρχική</li></a>
+                            <a href="register.html"><li>Εγγραφή</li></a>
+                            <a href="profile.html"><li>Προφίλ</li></a>
+                        
+                    </ul>
+                </nav>
+            </header>
+     
+            <aside>
+                <div class = "aside_menu">
+                    <h1>
+                        Μαθήματα
+                    </h1>
+                    
+                    <nav id = "aside_nav">
+                        <script id="handlebars-demo-menu" type="text/x-handlebars-template">
+                        <ul >
+                            {{#each this}} 
+                            <a href="#{{id}}"><li style="text-align: left; line-height: 25px; ">{{title}}</li></a>
+                            {{/each}}
+                        </ul>
+                        </script>
+                    </nav>
+                </div>
+    
+                <div class = "aside_menu">     
+                        <h1>
+                            Links
+                        </h1>
+                        <nav>
+                            <ul>
+                                <a href="https://www.wikipedia.com/"><li>Wikipedia</li></a>
+                                <a href="https://www.aueb.gr/"><li>Aueb</li></a>
+                                <a href="https://www.w3schools.com/"><li>W3schools</li></a>                
+                            </ul>
+                        </nav>
+                </div>
+                        
+            </aside>
+            
+            <main>
+                <h4 id="courses-header"></h4>
+                <div id="courses-hierarchy">
+                    
+                        <script id="handlebars-demo-courses" type="text/x-handlebars-template">
+                            {{#each this}}
+                            <h4 id="{{id}}"> {{title}}</h4>
+                            <section class = "section_courses" id="section_courses">
+                             
+                                <div class="leftside">
+                                    
+                                    <img src=" https://elearning-aueb.herokuapp.com/static/images/{{img}}" alt="logo" class="icons" ;/>
+                                </div>
+                                <div class="border_vertical"></div>
+                                <div class = "rightside">
+                                    <h5>Περιγραφή</h5>
+                                    <p>{{description}}</p>
+                                    <h5>Περιεχόμενο του μαθήματος :</h5>
+                                    <p>{{objectives}}</p>
+                                    <h5>Κατηγορία</h5>
+                                    <p>{{category}}</p>
+                                    <h5>Κωδικός μαθήματος :</h5>
+                                    <p>{{id}}</p>  
+                                </div>
+                            
+                            </section>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            {{/each}}
+                            
+                            </script>
+                       
+                </div>
+    
+                <div class="border"></div>
+            </main>
+            <footer>
+                <section>
+                    <h3>Authors</h3>
+                    
+                        <p>Ζερβα Αθηνα</p>
+                        <p>Δεληγιαννης Νικος</p>
+                    
+                </section>
+                
+                <section>
+                    <h3>Links</h3>
+                    
+                    <div>
+                        <a href="mailto:athinamariazerva@gmail.com">
+                            <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\mail.png" alt="logo" class="mail"/> 
+                        </a>
+                        <a href="https://www.facebook.com/">
+                            <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\fb_hover.png" alt="logo" class="fb_hover"/>   
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\insta.png" alt="logo" class="insta"/>   
+                        </a>
+                    </div>
+                        
+                    
+                </section>
+        
+                <section>
+                    <h3>Location</h3>
+                        <p><a class = "links" href="https://www.google.com/maps/place/%CE%A6%CE%B9%CE%BB%CE%BF%CE%BB%CE%AC%CE%BF%CF%85+152-158,+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1+116+32/@37.9618683,23.7418563,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1bd6dc768185f:0xe585087b5e836d40!8m2!3d37.9618641!4d23.744045">Φιλολάου 152-158, Αθήνα 116 32 , Ελλάδα</a></p>
+                        <p><a class = "links" href="https://www.google.com/maps/place/%CE%94%CE%B5%CF%81%CE%B9%CE%B3%CE%BD%CF%8D+11-1,+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1+104+34/@37.9945942,23.7319462,18z/data=!3m1!4b1!4m13!1m7!3m6!1s0x14a1bd6dc768185f:0xe585087b5e836d40!2zzqbOuc67zr_Ou86szr_PhSAxNTItMTU4LCDOkc64zq7Ovc6xIDExNiAzMg!3b1!8m2!3d37.9618641!4d23.744045!3m4!1s0x14a1a2cc91d65591:0x7579392962430e95!8m2!3d37.9945931!4d23.7325969">Δεριγνύ 11-1, Αθήνα 104 34 , Ελλάδα</a></p>    
+                        <p><a>Τηλ. 6913131313</a></p>    
+                </section>
+                
+                
+            </footer>
+      
+    </body>
+    <script src="client.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</html>

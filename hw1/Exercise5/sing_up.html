@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link href="style3.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" type="text/javascript"></script>
+            
+            
+        <title>
+           Sing Up
+        </title>
+    </head>
+
+    <body>
+        
+        <main class = wrapper>
+            
+        
+                <header>
+                    <a href="sing_up.html"><li>Sign Up! </li></a>
+                    <nav>
+                        <ul>
+                            <div class="border_vertical_header"></div>
+                            <a href="index.html"><li>Home </li></a>
+                            <div class="border_vertical_header"></div>
+                            <a href="themes.html"><li>Themes</li></a>
+                            <div class="border_vertical_header"></div>
+                            <a href="about_us.html"><li>About us</li></a>
+                            <div class="border_vertical_header"></div>
+                            <a href="contact_us.html"><li>Contact us</li></a>
+                        </ul>
+                    </nav>
+         
+                </header>
+        
+                <aside>
+
+                    <div class = "logoarea">
+                        <a href="index.html">
+                            <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\logo2.png"  alt="logo" />
+                        </a>
+                    </div>
+                    
+                    <div class = "aside_menu">
+                        <h1>
+                            Quick Menu
+                        </h1>
+                        
+                        <nav class = "aside_nav">
+                            <ul>
+                                <a href="programming.html"><li>Προγραμματισμός</li></a>
+                                <a href="data_science.html"><li>Επιστήμη Δεδομένων</li></a>
+                                <a href="app_development.html"><li>Ανάπτυξη Eφαρμογών</li></a>            
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <div class="border"></div>
+                    <div class = "aside_menu">     
+                            <h1>
+                                Links
+                            </h1>
+                            <nav>
+                                <ul>
+                                    <a href="https://www.wikipedia.com/"><li>Wikipedia</li></a>
+                                    <a href="https://www.aueb.gr/"><li>Aueb</li></a>
+                                    <a href="https://www.w3schools.com/"><li>W3schools</li></a>                
+                                </ul>
+                            </nav>
+                    </div>
+                            
+                </aside>
+
+
+            <div class="content">
+                <section class = "menu">
+                    <div class="border"></div>
+                    <div class="signupdiv">
+                        <div>
+                            <h4>Για να εγγραφείς στο δικό μας κόσμο μάθησης ,ως νέος χρήστης, συμπλήρωσε την φόρμα . </h4>
+                            <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\signup.png"  alt="logo" />
+                        </div>
+                        <form autocomplete="on" class = "form" id ='form'>
+                            <fieldset class="gridfield">
+                            <legend> <b>Προσωπικά στοιχεία</b> </legend>
+                            <div class="leftcol">
+                                <label for="fname">Όνοματεπώνυμο</label>
+                                <input type="text" id="fname" name="fname"
+                                placeholder="Νικος Δεληγιαννης"
+                                 pattern="[Α-Ω] [α_ω]+" ><br><br>
+                                <label for="fname">Πατρώνυμο </label>
+                                <input type="text" id="fname" name="fname"
+                                placeholder="Μάριος"
+                                pattern="[Α-Ω] [α_ω]+" ><br>
+                            </div>
+                            
+                            <div class="centercol">
+                                <label for="country">Χώρα</label>
+                                <input autocomplete="on" type="text" id="input-country" name="cname"
+                                        pattern="(?=.*[a-z])(?=.*[A-Z])"
+                                        placeholder="Ελλάδα" onkeyup="showResults(this.value)" >
+                    
+                                <div  class="autoCountry" id="autoCountry" id = "tags">
+                                                               
+                                </div>
+                                <br>
+                                <label for="fname">Ημερομηνία γέννησης</label>
+                                <input type="date" id="mname" name="mname">
+                            </div>
+                            <div class="rightcol">
+                                <label for="location">Διεύθυνση </label>
+                                <input type="text" id="location" name="location"
+                                    placeholder="Νοταρά 27,Παγκράτι,11634,Αθήνα"
+                                    title="Οδό-αριθμό,Περιοχή,ΤΚ,Πόλη">
+                            </div>
+                            </fieldset>
+                            <fieldset class="gridfield"> 
+                                <legend><b> Στοιχεία επικοινωνίας</b> </legend>
+                                <div class="leftcol">
+                                    <label for="txt_telephone">Τηλέφωνο </label>
+                                    <input type="text" id="txt_telephone" name="txt_telephone"
+                                       pattern=".{10}" placeholder="69012345678"
+                                         required>
+                                </div>
+                                <div class="centercol">
+                                    <label for="txt_email"> Email</label>
+                                    <input type="email" id="txt_email" name="email"
+                                        autocomplete="email" list="user_mail" required>
+                                            <datalist id="user_mail">
+                                                <option>username@gmail.com</option>
+                                                <option>username@aueb.gr</option>
+                                            </datalist>
+                                </div>
+        
+        
+                            </fieldset>
+                            <fieldset class="gridfield">
+                                <legend> <b>Στοιχεία Χρήστη </b></legend>
+                                <div class="leftcol">
+                                    <label for="user_name">Username</label>
+                                    <input type="text" id="uname" name="uname"
+                                        autocomplete="username" list="user" required><br>
+                                        <datalist id="user">
+                                                <option>user33</option>
+                                                <option>Nick Del</option>
+                                        </datalist>
+                                </div>
+                                <div class="centercol">
+                                    <label for="password">Password </label>
+                                    <input  type="password" id="password" name="password"
+                                        minlenght="8" required><br>
+                                </div>
+                                <div class="rightcol">
+                                    <label for="validate-password">Repeat Password </label>
+                                    <input  type="password" id="validate-password" name="validate-password"
+                                        minlenght="8"  required><br>
+                                </div>
+                            
+        
+                            </fieldset>
+                            <fieldset class="gridfield">
+                                <legend><b>Στοιχεία πληρωμής</b></legend>
+                                <div class="leftcol">
+                                    <label for="ctype">Type of Card</label>
+                                    <input type="text" id="ctype" name="ctype" autocomplete="off" > <br><br>
+                                    <!--vazw me javascript-->
+
+                                    <label for="cname">Name of Card</label>
+                                    <input type="text" id="cname" name="cardname" 
+                                        placeholder="Nick Del"
+                                        pattern="(?=.*[a-z])(?=.*[A-Z])" ><br><br>
+                                        <label for="ccnum">Card number</label>
+                                    <input type="text" id="ccnum" name="ccnum" 
+                                        placeholder="1234 1234 1234 1234"
+                                        pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required>
+                                    </div>
+                                 <div class="centercol">
+  
+                                    <label for="expmonth">Exp Month</label>
+                                    <input type="text" id="expmonth" name="expmonth" 
+                                        placeholder="December required"><br><br>
+                                        <label for="cvv">CVV</label>
+                                        <input type="password" id="cvv" name="cvv"
+                                            placeholder="123"
+                                            pattern="[0-9]{3}" required><br><br>
+                                        <label for="cvv">Ποσό</label>
+                                        <input type="password" id="cvv" name="cvv"
+                                            placeholder=""
+                                            pattern="[0-9]{3}" required><br>
+                                 </div>
+                                 <div class="rightcol">
+                                        <br>
+                                        <button type="Reset" onclick="">Eπαναφορά</button><br><br><br><br>
+                                        <button type="Submit" onclick="">Έγκριση</button>
+                                 </div>
+        
+                            </fieldset>
+                            <fieldset class="gridfield">
+                                <legend><b>Ερωτηματολόγιο</b></legend>
+                                <div class="leftcol">
+                                    <label for="fname">Επίπεδο σπουδών</label>
+                                    <input type="text" id="fname" name="fname"
+                                    placeholder="Ακαδημαικές"
+                                    pattern="[Α-Ω] [α_ω]"><br><br>
+                                    
+                                   
+                                    <fieldset class="insidefield">
+                                        <legend>Ποία μορφή εκπαίδευσης προτιμάς:</legend>
+                                        <label for="radio"> εξ αποστάσεως </label>
+                                        <input type="radio" id="radio" name="radio" >
+                                        <label for="radio"> δια ζώσης </label>
+                                        <input type="radio" id="radio" name="radio" >
+                                    </fieldset><br>
+                                    <label for="fname">Άλλες ασχολίες</label>
+                                    <textarea type="textarea" id="hname" name="hname" rows="3"cols="20" >
+                                    </textarea>
+                                    <details>πχ.ζωγραφική, ρομποτική</details>
+                                    <br><br>
+                                </div>
+                                <div class="centercol">
+                                    <label for="fname">Κατεύθυνση σπουδών</label>
+                                    <input type="text" id="fname" name="fname"
+                                    placeholder="Πληροφορικής"
+                                    pattern="[Α-Ω] [α_ω]" ><br><br>
+                                    
+                                    <label for="hobby">Διάλεξε ενότητα της αρεσκείας σου :</label>
+            
+                                    <select name="hobby" id="hobby" multiple>
+                                        <optgroup label="COMPUTER SCIENCE">
+                                    <option value="programming">Προγραμματισμός</option>
+                                    <option value="data_science">Επιστήμη Δεδομένων</option>
+                                    <option value="web_development">Ανάπτυξη εφαρμογών</option>
+                                        </optgroup>
+                                        <optgroup label="PHYSICAL SCIENCE">
+                                    <option value="physics">Φυσική</option>
+                                    <option value="chemistry">Χημεία</option>
+                                    <option value="maths">Μαθηματικά</option>
+                                        </optgroup>
+                                        <optgroup label="PHILOLOGY">
+                                            <option value="logotexnia">Λογοτεχνεία</option>
+                                            <option value="ellinika">Νέα Ελληνικά</option>
+                                            <option value="latin">Λατινικά</option>
+                                        </optgroup>
+                                    </select><br><br><br><br>
+                                    <label for="range">Πόσο καλά χειρίζεσαι τον υπολογιστή: </label>
+                                <input type="range" id="range" name="range" ><br>
+                                </div>
+                                <div class="rightcol">
+                                    <label for="fname">Έτος αποφοίτησης</label>
+                                    <input type="number" id="fname" name="fname"
+                                    placeholder="2017"
+                                    pattern="[0-9]{4}" ><br> <br>
+                                    <label for="nname">Πόσες μέρες της βδομάδας θα ήθελες να παρακολουθείς</label>
+                                    <input type="¨number" id="nname" name="nname" ><br>
+                                    
+                                </div>
+  
+                            </fieldset>
+                            <fieldset class="endform">
+                                <legend><b>Κάρτα Μέλους</b></legend>
+                                <div>    
+                                    <label for="fname">Επιλογή χρώματος κάρτας μέλους:  </label><br><br><br>
+                                    <input type="color" id="f_color" name="f_color" ><br>
+                                </div>
+                                <div>
+                                    <label for="fname">Επιλογή φωτογραφίας κάρτας μέλους:</label>
+                                    <input type="file" id="f_photo" name="f_photo" ><br>
+                                </div>
+                            </fieldset>
+                        
+                            <label>
+                                <h5>
+                                    <input type="checkbox"  name="GDPR"> <em>Δέχομαι να αποθηκευτούν τα στοιχεία μου.</em>
+                                </h5>
+                            </label>
+                            <button class ="submitbutton" type="submit" id = "submit" value="Submit" onclick="">Submit</button>
+                            
+                        
+                        </form>
+                    </div>
+                    <div class="border"></div>
+                </section>
+            </div>
+        
+    
+
+            <footer>
+
+                <section>
+                    <h3>Authors</h3>
+                    
+                        <p><a class = "links" href="about_us.html">Ζερβα Αθηνα</a></p>
+                        <p><a class = "links" href="about_us.html">Δεληγιαννης Νικος</a></p>
+                    
+                </section>
+                
+                <section>
+                    <h3>Links</h3>
+                    
+                    <div>
+                        <a href="mailto:athinamariazerva@gmail.com">
+                            <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\mail.png" alt="logo" class="mail"/> 
+                        </a>
+                        <a href="https://www.facebook.com/">
+                            <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\fb_hover.png" alt="logo" class="fb_hover"/>   
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\insta.png" alt="logo" class="insta"/>   
+                        </a>
+                    </div>
+                        
+                    
+                </section>
+        
+                <section>
+                    <h3>Location</h3>
+                        <p><a class = "links" href="https://www.google.com/maps/place/%CE%A6%CE%B9%CE%BB%CE%BF%CE%BB%CE%AC%CE%BF%CF%85+152-158,+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1+116+32/@37.9618683,23.7418563,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1bd6dc768185f:0xe585087b5e836d40!8m2!3d37.9618641!4d23.744045">Φιλολάου 152-158, Αθήνα 116 32 , Ελλάδα</a></p>
+                        <p><a class = "links" href="https://www.google.com/maps/place/%CE%94%CE%B5%CF%81%CE%B9%CE%B3%CE%BD%CF%8D+11-1,+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1+104+34/@37.9945942,23.7319462,18z/data=!3m1!4b1!4m13!1m7!3m6!1s0x14a1bd6dc768185f:0xe585087b5e836d40!2zzqbOuc67zr_Ou86szr_PhSAxNTItMTU4LCDOkc64zq7Ovc6xIDExNiAzMg!3b1!8m2!3d37.9618641!4d23.744045!3m4!1s0x14a1a2cc91d65591:0x7579392962430e95!8m2!3d37.9945931!4d23.7325969">Δεριγνύ 11-1, Αθήνα 104 34 , Ελλάδα</a></p>    
+                        <p><a>Τηλ. 6913131313</a></p>    
+                </section>
+                
+                
+            </footer>
+    
+            
+        </main>
+    
+        <script src="script.js"></script>
+
+        </body>
+    
+    </html>

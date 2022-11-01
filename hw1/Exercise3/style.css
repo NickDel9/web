@@ -1,0 +1,540 @@
+.wrapper{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(202, 202, 202);
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-gap: 2px;
+    
+    grid-template-areas:
+    "sidebar header"
+    "sidebar content"
+    "sidebar content"
+    "sidebar footer"; 
+}
+
+
+body{
+    background: linear-gradient(rgb(202, 202, 202), white);
+    font-family:Arial, Helvetica, sans-serif;
+     margin: 0px;
+    
+}
+
+/* sidebar */
+
+aside{
+    grid-area: sidebar;
+    background: rgb(38, 121, 100);
+}
+
+.aside_menu{
+    display: block;
+    background: linear-gradient(rgb(10, 75, 53), rgb(38, 121, 100));
+    margin-top: -17px;
+}
+
+aside h1{
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    border-style: solid;
+    color: white;
+    border-color: rgb(202, 202, 202);   
+    background-color: rgb(39, 43, 48);
+}
+
+.aside_menu > nav{
+    display: block;
+    background: linear-gradient(rgb(10, 75, 53), rgb(38, 121, 100));
+    font-size: 18px;  
+    margin-top: 55px;
+}
+
+
+.aside_menu > nav ul{
+    margin-left: -40px;
+    
+    text-align: center;
+}
+
+.aside_menu > nav li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: all ease-in-out 200ms;
+    line-height: 60px;
+    color: rgb(202, 202, 202);
+    border-bottom: 1px solid rgb(202, 202, 202);
+    border-top: 1px solid rgb(202, 202, 202);
+    width: 100%;  
+}    
+
+.aside_menu > nav a{
+    display: block;
+    text-decoration: none;
+}
+
+.aside_menu > nav li:hover{
+    background-color:rgb(10, 75, 53);
+    color: white;   
+}
+
+/* header */
+
+header{
+    display: flex;
+    grid-area: header;
+    background:linear-gradient(to right ,rgb(10, 75, 53) , white , white , white );
+    font-size: 17px;
+}
+
+/* header navigation */
+
+header > nav {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+header > nav a{
+    margin: auto;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+}
+    
+header > nav ul{
+    margin: auto;
+    padding: 0px;
+    height: max-content;
+    text-align: center;
+    display:flex;   
+}
+    
+header > nav li{
+    list-style-type: none;
+    line-height: 60px;
+    width: 150px;
+    transition: all ease-in-out 200ms;
+}
+    
+    /* Change the color of list items on hover mode */
+header > nav li:hover { 
+    background-color: rgb(38, 121, 100);
+}
+
+header > nav a:hover{
+    color: rgb(255, 255, 255);
+}
+
+/*background of logo */
+.logoarea{
+    text-align: center;
+    height: 180px;
+    background-color: rgb(10, 75, 53);
+}
+
+.logoarea img{
+    padding-top:  15px;
+    width: 130px;
+    height:140px;
+}
+
+/* start of main page*/
+.content{
+    grid-area: content;
+    display: grid;
+    background-color: rgb(241, 241, 241);
+    grid-template-columns: 70px 1fr 70px;
+        grid-template-areas:
+        "left center right"
+        "left center1 right";
+        
+        justify-items: center;
+        align-items: center;
+}
+
+.page_header{
+    color: rgb(114, 114, 114);
+    height: max-content;
+    grid-area: center;
+}
+
+.content > section  section > h2 , .content > .menu  > h2{ 
+    
+    
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: rgb(114, 114, 114);
+    grid-area: center;
+ }
+ 
+.content article{
+    margin-top: 50px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.527);
+    grid-area: center;
+}
+.content article > img{
+    width:450px;
+    height:500px;
+    float: right;
+  
+}
+
+.content article p{
+    font-size: 22px;
+    text-align: left;
+    padding-left: 10px;
+    color: rgb(114, 114, 114);
+    margin: auto;
+}
+
+.menu{
+    grid-area: center1;
+}
+
+.main_page_section{
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    border-color: rgb(39, 43, 48);
+    width: 50%;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+}
+
+.main_page_section > a{
+    text-decoration: none;
+}
+
+.part{
+    display: block;
+    background-color: rgb(39, 43, 48);
+    text-align: center;
+    margin: auto; 
+    text-decoration: none;
+    padding-top: 3px;
+}
+
+.part p{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 0px;
+}
+
+.part:hover{
+    background-color: rgb(38, 121, 100);
+    transition: all ease-in-out 300ms;
+  }
+
+.border_vertical{
+    border-left: 8px solid rgba(255, 255, 255, 0);;
+}
+.border_vertical_header{
+    border-left: 2px solid rgb(202, 202, 202); 
+}
+.border{
+    height: 40px;
+    background-color: rgb(202, 202, 202);
+    width: max-content;
+}
+
+/*theme page*/
+
+
+.quote{
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+.content  h1{
+    text-align: center; 
+    margin-top: 2px;
+    color: rgb(90, 90, 90);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.img{
+    width:180px;
+    height:150px;
+}
+
+.theme_page_section{
+    margin-top: 50px;
+    text-align: center;
+    margin: auto;
+    
+    width: 80%;
+    background-color:rgb(207, 207, 207);
+    border-color: rgb(168, 168, 168);
+    border-width: 1px;
+    border-radius: 6px;
+    border-style:solid;
+}
+
+.theme_page_section img{
+    float: left;
+    margin-left: 5px;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.theme_page_section  > p{
+    text-align: left;
+    font-size: 20px;
+    padding-top: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.theme_2ndsection{
+    width: 100%;
+    display: flex;    
+}
+
+.theme_2ndsection > a{
+    width: 33.333%;
+    background: linear-gradient(rgb(38, 121, 100),rgb(39, 43, 48));
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* computer science section */
+.theme_page_section > .theme_2ndsection li{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.theme_page_section > .theme_2ndsection li:hover{
+    background-color: rgba(10, 75, 53, 0.788);
+    transition: all ease-in-out 250ms;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+}
+
+/*courses pages */
+
+.icons{
+    width: 200px;
+    height:200px;
+    
+}
+
+
+.ctxt{
+    color: rgb(42, 55, 70);
+    text-align: center;
+}
+
+.coursesIerarchy{
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(42, 55, 70);
+    height: max-content;
+    border-radius: 5px;
+}
+
+.section_courses{
+    background-color: rgb(42, 55, 70);
+    display: flex;
+    width: 85%;
+    margin: auto;
+}
+
+
+.leftside{
+    display: block;
+    background-color:rgb(255, 255, 255);
+    height: 300px;
+    width: fit-content;
+    box-shadow: 5px 5px rgb(38, 121, 100); 
+}
+
+.leftside h2{
+    margin-top:0vmax;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    background-color: rgb(38, 121, 100);
+}
+  
+.rightside{
+    display: block;
+    height:max-content;
+    border-style: solid;
+    box-shadow: 5px 5px rgb(38, 121, 100); 
+    border-color: white;
+}
+
+.rightside:hover{
+    background-color: rgb(38, 121, 100);
+    transition: all ease-in-out 300ms;
+}
+
+.rightside > ul > li{
+    text-align: left;
+    color: rgba(255, 255, 255, 0.74);
+ }
+
+.rightside h3{
+        background-color: rgb(255, 255, 255);
+}
+
+.rightside a{
+    color: rgb(255, 255, 255);
+}
+
+.rightside > p{
+    margin-top:0vmax;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.74);
+    text-decoration: none;  
+}
+
+
+
+
+  /* end of programming page*/
+
+
+  /*about us page*/ 
+
+  .bio{  
+    background: linear-gradient(rgb(39, 43, 48), rgb(38, 121, 100));
+    display: flex;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    height: max-content;   
+    
+}
+
+.bios_heading{
+    color: azure;
+    font-variant: small-caps;
+}
+
+.biotxt{
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+.bio > div{
+    display: block;
+    height: min-content;
+    margin: auto;
+}
+
+.bios_photo{ 
+    width:180px;
+    height:350px;
+    border-radius: 0%;
+    border-style: solid;
+    border-color: rgb(38, 121, 100);
+    margin: auto;
+}
+
+/* end of about us page*/
+
+.links:hover{
+   color: rgb(0, 0, 0);
+}
+
+/*contact us*/
+
+.contact_intro {
+    display: flex;
+    align-items: center;
+}
+
+.contact_intro > nav{
+    margin-left: 10%;
+    margin-top:5%;
+    width:33.3%;
+}
+
+.contact_intro > nav > a{
+    text-decoration: none;
+    color: rgb(38, 121, 100);
+}
+
+.menu > h4{
+    color: rgb(38, 121, 100);
+}
+
+
+.links:hover{
+    
+    color: rgb(0, 0, 0);
+ }
+
+.content > .menu > h4{
+      text-align: center; 
+}
+
+.content > .menu > form{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+/*end of contact us*/
+
+  footer{
+    grid-area: footer;
+    background-color:rgb(39, 43, 48);
+    display: flex;
+    clear: right;
+}
+
+footer > section{  
+    text-align: center;
+    color: white;
+    width: 33.33333333%; 
+}
+
+footer > section p{
+    text-align: center;
+    list-style-type: none;
+}
+
+footer > section p a{
+    text-decoration: none;
+    color:white;
+}
+
+footer > section > div{
+    display: flex; 
+}
+
+footer >section> div > a{
+    padding-top: 5%;
+    margin: auto; 
+}
+
+footer > section > div a:-webkit-any-link{
+    text-decoration: none;
+}
+
+footer > section > h3{
+    text-align: center;
+    color: rgb(38, 121, 100);
+}
+
+.fb_hover , .mail , .insta{
+    width: 30px;
+    height: 30px; 
+}
+/*footer : End*/

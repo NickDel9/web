@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            LearnIT
+        </title>
+    </head>
+
+    <body onload=initMenu()>
+
+        <header>
+            <a href="index.html">
+                <img src="C:\Users\User\Desktop\LOGO.png" id="header-logo" alt="logo"  />
+              
+           </a>
+            <nav>
+                <ul>
+                        <a href="index.html"><li>Αρχική</li></a>
+                        <a href="register.html"><li>Εγγραφή</li></a>
+                        <a href="profile.html"><li>Προφίλ</li></a>
+                    
+                </ul>
+            </nav>
+        </header>
+ 
+        <aside>
+            <div class = "aside_menu">
+                <h1>
+                    Κατηγορίες μαθημάτων
+                </h1>
+                
+                <nav id = "aside_nav">
+                    <script id="handlebars-demo-menu" type="text/x-handlebars-template">
+                    <ul >
+                        {{#each this}} 
+                        <a href="courses.html?category={{id}}"><li>{{title}}</li></a>
+                        {{/each}}
+                    </ul>
+                    </script>
+                </nav>
+            </div>
+
+            <div class = "aside_menu">     
+                    <h1>
+                        Links
+                    </h1>
+                    <nav>
+                        <ul>
+                            <a href="https://www.wikipedia.com/"><li>Wikipedia</li></a>
+                            <a href="https://www.aueb.gr/"><li>Aueb</li></a>
+                            <a href="https://www.w3schools.com/"><li>W3schools</li></a>                
+                        </ul>
+                    </nav>
+            </div>
+                    
+        </aside>
+        <main>
+
+            <div id = "search-area-index">
+                <input type="text" id="search-index"  placeholder="Search for courses..">
+                <button type= "button" id = "search-button-index" onclick="Search()">Search</button>
+                <button type= "button" id = "search-button-index" onclick="Clear()">Clear</button>
+            </div>
+
+            <div id = "search-results">
+                
+                <script id="handlebars-demo" type="text/x-handlebars-template">
+                    <h3>Αποτελέσματα αναζήτησης</h3>
+                    <table id = "table-results">
+                        <tr id="tr-header">
+                            <th>Τίτλος</th>
+                            <th>Κωδικός</th>
+                            <th>Κατηγορία</th>
+                        </tr>
+                        {{#each this}} 
+                        <tr>
+                            <td>
+                                <div id="fc-container">
+                                    <img src=" https://elearning-aueb.herokuapp.com/static/images/{{img}}" style="height: 60px; width:60xp">
+                                    <h4>
+                                        {{title}} 
+                                    </h4>
+                                </div>
+                            </td>
+                            <td>{{id}}</td>
+                            <td>{{category}}</td>
+                            
+                        </tr>
+                        {{/each}}
+                    </table>
+                </script>
+            </div>   
+            <h2 id="welcome">Καλώς Ορίσατε!</h2>
+            <h3 id="welcome-text">Εξερευνήστε τα μαθήματα της υπηρεσίας είτε μέσω της αναζήτησης είτε μέσω των κατηγοριών τους!</h3 >
+            <article>
+                
+                <p>Τα LEARN IT online courses είναι δωρεάν διαδικτυακά μαθήματα διαθέσιμα για εγγραφή σε οποιονδήποτε.
+                    Τα courses παρέχουν έναν προσιτό και ευέλικτο τρόπο εκμάθησης νέων δεξιοτήτων, προώθησης της καριέρας σας και παροχής ποιοτικών 
+                    εκπαιδευτικών εμπειριών σε κλίμακα.Εκατομμύρια άνθρωποι  σε όλο τον κόσμο χρησιμοποιούν LEARN IT courses για να μάθουν για διάφορους λόγους,
+                    όπως: εξέλιξη σταδιοδρομίας, αλλαγή σταδιοδρομίας,προετοιμασία για κολέγιο, συμπληρωματική μάθηση, δια βίου μάθηση,
+                    εταιρική ηλεκτρονική μάθηση και κατάρτιση και πολλά άλλα. Τα courses έχουν αλλάξει δραματικά τον τρόπο με τον οποίο μαθαίνει ο κόσμος.
+                    Τα courses έχουν αλλάξει δραματικά τον τρόπο με τον οποίο μαθαίνει ο κόσμος. <b>Είστε έτοιμοι να ξεκινήσετε;</b></p>
+                <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\main page 1.png" alt="logo"/>
+            </article>
+            <div class="border"></div>
+            <div class="border"></div>
+            <div class="border"></div>
+            <div class="border"></div>
+        </main>
+        
+      
+    
+    <footer>
+       
+        <section>
+            <h3>Authors</h3>
+            
+                <p>Ζερβα Αθηνα</p>
+                <p>Δεληγιαννης Νικος</p>
+            
+        </section>
+        
+        <section>
+            <h3>Links</h3>
+            
+            <div>
+                <a href="mailto:athinamariazerva@gmail.com">
+                    <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\mail.png" alt="logo" class="mail"/> 
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\fb_hover.png" alt="logo" class="fb_hover"/>   
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="C:\Users\User\Desktop\Web Dev\MOOC\p3170207- p3170268\Assets\insta.png" alt="logo" class="insta"/>   
+                </a>
+            </div>
+                
+            
+        </section>
+        
+        <section>
+            <h3>Location</h3>
+                <p><a class = "links" href="https://www.google.com/maps/place/%CE%A6%CE%B9%CE%BB%CE%BF%CE%BB%CE%AC%CE%BF%CF%85+152-158,+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1+116+32/@37.9618683,23.7418563,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1bd6dc768185f:0xe585087b5e836d40!8m2!3d37.9618641!4d23.744045">Φιλολάου 152-158, Αθήνα 116 32 , Ελλάδα</a></p>
+                <p><a class = "links" href="https://www.google.com/maps/place/%CE%94%CE%B5%CF%81%CE%B9%CE%B3%CE%BD%CF%8D+11-1,+%CE%91%CE%B8%CE%AE%CE%BD%CE%B1+104+34/@37.9945942,23.7319462,18z/data=!3m1!4b1!4m13!1m7!3m6!1s0x14a1bd6dc768185f:0xe585087b5e836d40!2zzqbOuc67zr_Ou86szr_PhSAxNTItMTU4LCDOkc64zq7Ovc6xIDExNiAzMg!3b1!8m2!3d37.9618641!4d23.744045!3m4!1s0x14a1a2cc91d65591:0x7579392962430e95!8m2!3d37.9945931!4d23.7325969">Δεριγνύ 11-1, Αθήνα 104 34 , Ελλάδα</a></p>    
+                <p><a>Τηλ. 6913131313</a></p>    
+        </section>
+        
+        
+    </footer>
+    </body>
+    <script src="client.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</html>
